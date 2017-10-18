@@ -1,0 +1,16 @@
+.DS_Store
+# Eclipse Projects Files
+.settings
+.classpath
+.project
+# Target Folder
+target/
+# Bin Folder
+bin/
+# Logs Folder
+logs/
+# Other folders
+.metadata
+.recommenders
+.sonar
+Servers
