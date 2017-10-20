@@ -8,6 +8,7 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebServlet;
 
 import it.univaq.ingweb.courseweb.utils.Database;
+import it.univaq.ingweb.courseweb.utils.FreeMarkerUtils;
 
 @WebServlet(name = "ContextListener", urlPatterns = {"/ContextListener"})
 public class ContextInitializer implements ServletContextListener {
@@ -16,6 +17,7 @@ public class ContextInitializer implements ServletContextListener {
 	public void contextDestroyed(ServletContextEvent sce) {
 		try {
 			Database.connect();
+			FreeMarkerUtils.initConfiguration();
 		} catch (NamingException e) {
 		
 		} catch (SQLException e) {
